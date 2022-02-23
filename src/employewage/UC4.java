@@ -1,38 +1,43 @@
 package employewage;
 
-class employee3 {
-	void disp() {
-
-		// variable decleration
-		int isPartTime = 1;
-		int isFullTime = 2;
+class employee4 {
+	void partTime() {
+		// variable
 		int empRatePerHr = 20;
-		int empHrs;
-		int salary;
+		int empHrs = 0;
+		double salary = 0;
 
-		// radiom to check wether full time or parttime
 		double randomCheck = Math.floor(Math.random() * 10) % 3;
+		int i = (int) randomCheck;
 
-		if (isFullTime == randomCheck) {
+		// switch case
+		switch (i) {
+
+		case 2:
 			System.out.println("Employee is FullTime");
 			empHrs = 8;
-		} else if (isPartTime == randomCheck) {
+			break;
+		case 1:
 			System.out.println("Employee is PartTime");
 			empHrs = 4;
-		} else {
+			break;
+		case 0:
 			System.out.println("Employee is Absent");
 			empHrs = 0;
+			break;
 		}
+		// print employee salary
 		salary = empHrs * empRatePerHr;
 		System.out.println("Employee Salary" + salary);
 	}
 }
 
-public class UC3 {
+public class UC4 {
 
-	// creating object
 	public static void main(String[] args) {
-		employee3 r = new employee3();
-		r.disp();
+		
+		//creating object
+		employee4 r = new employee4();
+		r.partTime();
 	}
 }
